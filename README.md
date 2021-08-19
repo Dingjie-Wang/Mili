@@ -2,7 +2,7 @@
 **Mi**xed **l**inear modelling for **i**soform quantification and estimation (**Mili**)
 ## Installation
 ```
-git clone https://github.com/Tidesun/Mili.git
+git clone https://github.com/Augroup/Mili.git
 cd isoform_quantification
 python -m venv base
 source base/bin/activate
