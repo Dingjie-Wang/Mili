@@ -1,7 +1,7 @@
-# isoform_quantification
+# Mili
 ## Installation
 ```
-git clone https://github.com/Tidesun/isoform_quantification.git
+git clone https://github.com/Tidesun/Mili.git
 cd isoform_quantification
 python -m venv base
 source base/bin/activate
