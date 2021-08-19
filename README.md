@@ -1,4 +1,4 @@
-# Mili
+# **Mi**xed **l**inear modelling for **i**soform quantification (**Mili**)
 ## Installation
 ```
 git clone https://github.com/Tidesun/Mili.git
