@@ -1,4 +1,5 @@
-# **Mi**xed **l**inear modelling for **i**soform quantification (**Mili**)
+# Mili
+**Mi**xed **l**inear modelling for **i**soform quantification and estimation (**Mili**)
 ## Installation
 ```
 git clone https://github.com/Tidesun/Mili.git
@@ -8,29 +9,9 @@ source base/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
-## TrEESR
+## Isoform quantification
 ```
-usage: main.py TrEESR [-h] -gtf GTF_ANNOTATION_PATH -o OUTPUT_PATH
-                      [-t THREADS]
-
-optional arguments:
-  -h, --help            show this help message and exit
-
-required named arguments for TrEESR:
-  -gtf GTF_ANNOTATION_PATH, --gtf_annotation_path GTF_ANNOTATION_PATH
-                        The path of annotation file
-  -lrsam LONG_READ_SAM_PATH, --long_read_sam_path LONG_READ_SAM_PATH
-                        The path of long read sam file
-  -o OUTPUT_PATH, --output_path OUTPUT_PATH
-                        The path of output directory
-
-optional arguments:
-  -t THREADS, --threads THREADS
-                        Number of threads
-```
-## TransELS
-```
-usage: main.py TransELS [-h] -gtf GTF_ANNOTATION_PATH -srsam
+usage: main.py quantify [-h] -gtf GTF_ANNOTATION_PATH -srsam
                         SHORT_READ_SAM_PATH -lrsam LONG_READ_SAM_PATH -o
                         OUTPUT_PATH [--b_cal_method B_CAL_METHOD]
                         [--alpha ALPHA] [--beta BETA] [--P P] [-t THREADS]
@@ -60,3 +41,24 @@ The alpha and beta parameters can be set as float. <br>
 The `alpha` should be set between 0 and 1, where 0 indicates using only the short reads and 1 indicates using only the long reads for quantification. <br>
 The `beta` can be set as a small float between 1e-9 to 1e-2. <br>
 By leaving `alpha` and `beta` default(adaptive), the alpha and beta will be obtained by deep learning model to get the optimal performance.
+
+## Calculate K-value
+```
+usage: main.py cal_K_value [-h] -gtf GTF_ANNOTATION_PATH -o OUTPUT_PATH
+                      [-t THREADS]
+
+optional arguments:
+  -h, --help            show this help message and exit
+
+required named arguments for TrEESR:
+  -gtf GTF_ANNOTATION_PATH, --gtf_annotation_path GTF_ANNOTATION_PATH
+                        The path of annotation file
+  -lrsam LONG_READ_SAM_PATH, --long_read_sam_path LONG_READ_SAM_PATH
+                        The path of long read sam file
+  -o OUTPUT_PATH, --output_path OUTPUT_PATH
+                        The path of output directory
+
+optional arguments:
+  -t THREADS, --threads THREADS
+                        Number of threads
+```
